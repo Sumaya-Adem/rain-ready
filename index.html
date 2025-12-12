@@ -2,21 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Lovable App</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>AquaGuard - Drought Resilience & Rain Prediction</title>
+    <meta name="description" content="AquaGuard helps farmers and communities predict rainfall, track drought levels, and receive early warnings for better agricultural planning." />
+    <meta name="author" content="AquaGuard" />
+    <meta name="theme-color" content="#1B78D0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <!-- TODO: Update og:title to match your application name -->
-    <meta property="og:title" content="Lovable App" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <meta property="og:title" content="AquaGuard - Drought Resilience & Rain Prediction" />
+    <meta property="og:description" content="Predict rainfall, track drought levels, and receive early warnings for better agricultural planning." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
+    <meta name="twitter:site" content="@AquaGuard" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <style>
+      /* Safe area padding for iOS */
+      :root {
+        --sat: env(safe-area-inset-top);
+        --sar: env(safe-area-inset-right);
+        --sab: env(safe-area-inset-bottom);
+        --sal: env(safe-area-inset-left);
+      }
+      
+      .pb-safe {
+        padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+      }
+    </style>
   </head>
 
   <body>
