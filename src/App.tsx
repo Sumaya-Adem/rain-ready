@@ -9,30 +9,13 @@ import Forecast from "./pages/Forecast";
 import DroughtMap from "./pages/DroughtMap";
 import Alerts from "./pages/Alerts";
 import Settings from "./pages/Settings";
+import ReportIssue from "./pages/ReportIssue";
+import KnowledgeBase from "./pages/KnowledgeBase";
+import AIChat from "./pages/AIChat";
+import GovNotifications from "./pages/GovNotifications";
 import NotFound from "./pages/NotFound";
-import BottomNav from "./components/BottomNav";
 
 const queryClient = new QueryClient();
-
-const AppContent = () => {
-  const location = useLocation();
-  const showNav = location.pathname !== '/';
-
-  return (
-    <>
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/forecast" element={<Forecast />} />
-        <Route path="/map" element={<DroughtMap />} />
-        <Route path="/alerts" element={<Alerts />} />
-        <Route path="/settings" element={<Settings />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      {showNav && <BottomNav />}
-    </>
-  );
-};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -40,7 +23,19 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <AppContent />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/forecast" element={<Forecast />} />
+          <Route path="/map" element={<DroughtMap />} />
+          <Route path="/alerts" element={<Alerts />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/report" element={<ReportIssue />} />
+          <Route path="/knowledge" element={<KnowledgeBase />} />
+          <Route path="/chat" element={<AIChat />} />
+          <Route path="/gov" element={<GovNotifications />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
